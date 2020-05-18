@@ -36,7 +36,7 @@ WORKDIR /working
 CMD ["./entry.sh"]
 
 # Add in our file
-COPY hello.sh entry.sh
+COPY /server/hello.sh entry.sh
 
 # Make file runnable
 RUN chmod +x entry.sh
