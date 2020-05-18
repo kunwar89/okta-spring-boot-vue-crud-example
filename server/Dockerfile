@@ -7,3 +7,4 @@ COPY /server/gradle $APP_HOME/gradle
 # download dependencies
 COPY . .
 RUN ./gradlew build
+CMD ["java","-jar","/root/dev/myapp/build/libs/myapp.jar"]
