@@ -54,5 +54,5 @@ bootJar {
 }
 
 bootRun {
-    mainClassName = 'SpringBootVueApplication'
+    mainClassName = 'com.java.springbootvue.SpringBootVueApplication'
 }
