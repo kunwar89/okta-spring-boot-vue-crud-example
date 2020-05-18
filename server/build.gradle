@@ -48,3 +48,7 @@ configurations.all {
 bootJar {
     mainClassName = 'SpringBootVueApplication'
 }
+
+bootRun {
+    mainClassName = 'SpringBootVueApplication'
+}
