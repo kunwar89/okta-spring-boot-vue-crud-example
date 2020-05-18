@@ -6,6 +6,8 @@ COPY /server/build.gradle /server/gradlew /server/gradlew.bat $APP_HOME
 COPY /server/gradle $APP_HOME/gradle
 # download dependencies
 COPY . .
-RUN ./gradlew build
-EXPOSE 8080
-CMD ["java","-jar","/root/dev/myapp/build/libs/myapp.jar"]
+
+RUN ./gradlew bootRun
+#RUN ./gradlew build
+# EXPOSE 8080
+# CMD ["java","-jar","/root/dev/myapp/build/libs/myapp.jar"]
