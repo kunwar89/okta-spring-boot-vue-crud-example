@@ -1,9 +1,9 @@
 FROM openjdk:8 AS BUILD_IMAGE
-ENV APP_HOME=/source/okta-spring-boot-vue-crud-example/server
+ENV APP_HOME=/github/workspace
 RUN mkdir -p $APP_HOME/src/main/java
 WORKDIR $APP_HOME
-COPY $APP_HOME/server/build.gradle gradlew gradlew.bat $APP_HOME
-COPY gradle $APP_HOME/gradle
+COPY /source/okta-spring-boot-vue-crud-example/server/build.gradle /source/okta-spring-boot-vue-crud-example/server/gradlew /source/okta-spring-boot-vue-crud-example/server/gradlew.bat $APP_HOME
+COPY /source/okta-spring-boot-vue-crud-example/gradle $APP_HOME/gradle
 # download dependencies
 COPY . .
 RUN ./gradlew build
