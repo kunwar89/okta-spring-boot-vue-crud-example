@@ -9,6 +9,6 @@ COPY . .
 RUN ./gradlew build
 FROM openjdk:8-jre
 WORKDIR /root/
-COPY --from=BUILD_IMAGE /root/dev/myapp/build/libs/myapp.jar .
+COPY --from=BUILD_IMAGE /server/root/dev/myapp/build/libs/myapp.jar .
 EXPOSE 8080
 CMD ["java","-jar","myapp.jar"]
