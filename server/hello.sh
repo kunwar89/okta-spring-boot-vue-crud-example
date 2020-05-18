@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ##################################################################
 ## Licensed to the Apache Software Foundation (ASF) under one   ##
 ## or more contributor license agreements.  See the NOTICE file ##
@@ -17,26 +19,5 @@
 ## under the License.                                           ##
 ##################################################################
 
-# Source image
-FROM alpine:latest
 
-# Details about the image
-LABEL version="1.0.0" \
-        maintainer="Jarrett Bariel" \
-        description="Build your own hello-world from alpine"
-
-# Create the working directory
-RUN mkdir -p /working
-
-# Set the working dir (will change to that directory, so all actions happen there)
-WORKDIR /working
-
-# Set our runnable
-# NOTE: This is above the addition of the file, as it will be one less layer to build as the file changes.
-CMD ["./entry.sh"]
-
-# Add in our file
-COPY hello.sh entry.sh
-
-# Make file runnable
-RUN chmod +x entry.sh
+echo "${GITHUB_WORKSPACE}: ${GITHUB_REPOSITORY}"
