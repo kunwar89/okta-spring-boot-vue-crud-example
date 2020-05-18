@@ -66,8 +66,8 @@ jobs:
 #           tag_with_sha: # optional
 #           # Path to the build context
 #           path: # optional, default is .
-#           # Path to the Dockerfile (Default is '{path}/Dockerfile')
-#           dockerfile: # optional
+          # Path to the Dockerfile (Default is '{path}/Dockerfile')
+          dockerfile: ./server/Dockerfile
 #           # Sets the target stage to build
 #           target: # optional
 #           # Always attempt to pull a newer version of the image
