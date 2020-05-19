@@ -46,4 +46,4 @@ configurations.all {
 }
 
 apply plugin: 'application'
-mainClassName = 'com.okta.springbootvue.SpringBootVueApplication'
+mainClassName = 'main.java.com.okta.springbootvue.SpringBootVueApplication'
