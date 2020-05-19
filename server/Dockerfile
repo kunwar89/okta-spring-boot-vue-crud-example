@@ -6,7 +6,7 @@ COPY /server/build.gradle /server/gradlew /server/gradlew.bat $APP_HOME
 COPY /server/gradle $APP_HOME/gradle
 # download dependencies
 COPY . .
-RUN ./gradlew bootRun --stacktrace --debug --info
+RUN ./gradlew build --stacktrace --debug --info
 
 #RUN ./gradlew build
 # EXPOSE 8080
