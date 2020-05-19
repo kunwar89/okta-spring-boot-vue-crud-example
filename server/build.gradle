@@ -44,3 +44,6 @@ configurations.all {
 	exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
 	exclude group: 'org.springframework.boot', module: 'logback-classic'
 }
+
+apply plugin: 'application'
+mainClassName = 'SpringBootVueApplication'
